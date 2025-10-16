@@ -29,12 +29,7 @@
     width: 100%;
     text-align: center;;
 }
-#boton{
- display: inline-block;                  /* permite padding y margen como bloque */
-  text-decoration: none !important;      /* fuerza que no haya subrayado */
-  color: white;                           /* color del texto */
-  background: linear-gradient(45deg, #ffffff, #0084ff);
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-}
+  
+    
+
+   
