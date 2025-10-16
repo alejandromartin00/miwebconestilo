@@ -1,4 +1,6 @@
 #Destinos{
+  width: 50%;
+  align-content: right;
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
@@ -9,6 +11,11 @@
     flex-direction: row;  
     gap: 15px;
     justify-content: center;
+    .destino {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
 }
 #bali, #maldivas, #paris, #roma, #tokio{
     background-color: #ffffff;
@@ -30,6 +37,14 @@
     text-align: center;;
 }
   
-    
 
-   
+.destino:hover {
+  background-color: blue;
+  color: white;
+}
+.destino:hover h3, .destino:hover p, .destino:hover br, .destino:hover button {
+  color: white;
+}
+.navbar {
+background-color: aliceblue;
+}
