@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pago - Demo</title>
+  <link rel="stylesheet" href="style-pagos.css">
+</head>
+<body>
+  <div id ="destino_pago">
+  <a href="destinos.html">Destinos</a>
+  </div>
+  <div class="card">
+    <h1>Pago de viaje (demo)</h1>
+    <p class="lead">Rellena los datos para simular el pago. Este formulario <strong>no procesa</strong> pagos ni guarda información.</p>
+
+    <form id="payForm" autocomplete="off" novalidate>
+      <div class="row">
+        <div class="campo">
+          <label for="fullname">Nombre completo</label>
+          <input id="fullname" type="text" placeholder="Ej. Alejandro Pérez" required>
+        </div>
+        <div class="campo">
+          <label for="dni">DNI / ID (opcional)</label>
+          <input id="dni" type="text" placeholder="12345678A">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input id="email" type="email" placeholder="tu@ejemplo.com" required>
+        </div>
+        <div class="campo">
+          <label for="phone">Teléfono</label>
+          <input id="phone" type="text" placeholder="+34 600 000 000">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="method">Método de pago (simulado)</label>
+        <select id="method" required>
+          <option value="tarjeta">Tarjeta (demo)</option>
+          <option value="bizum">Bizum (demo)</option>
+          <option value="transfer">Transferencia (demo)</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Importe</label>
+        <div class="amount">
+          <span>€</span>
+          <input id="amount" type="number" readonly required>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="comments">Comentarios (opcional)</label>
+        <input id="comments" type="text" placeholder="Ej. Vuelo + Hotel, habitación doble">
+      </div>
+
+      <div class="campo check">
+        <label>
+          <input id="agree" type="checkbox" required>
+          He leído y acepto que esto es una simulación y no se realizará ningún cargo.
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Simular pago</button>
+        <button type="reset" class="btn-secondary">Limpiar</button>
+      </div>
+
+      <p class="note">Nota: esto es solo una demostración, no se procesa ningún pago real.</p>
+    </form>
+  </div>
+
+  <script>
+    // Leer parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const viaje = params.get('viaje');   // Nombre del viaje
+    const precio = params.get('precio'); // Precio del viaje
+
+    // Rellenar importe automáticamente
+    if (precio) {
+      document.getElementById('amount').value = precio;
+    }
+
+    // Mostrar el nombre del viaje en la descripción
+    if (viaje) {
+      const lead = document.querySelector('.lead');
+      lead.textContent += `\nDestino seleccionado: ${viaje}`;
+    }
+
+    // Simulación de pago
+    document.getElementById("payForm").addEventListener("submit", e => {
+      e.preventDefault();
+      alert(`✅ Pago simulado completado para ${viaje}\nImporte: ${precio}€\nNo se ha procesado ningún cobro.`);
+    });
+  </script>
+
+</body>
+</html>

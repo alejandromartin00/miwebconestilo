@@ -1,0 +1,67 @@
+a {
+  text-decoration: none; /* quita el subrayado */
+  color: rgb(60, 192, 163);           /* opcional: cambiar color del enlace */
+}
+
+body {
+   display: flex;           /* nav y destinos lado a lado */
+  gap: 20px;               /* separación entre nav y destinos */
+  align-items: flex-start; /* alineados arriba */
+  padding: 20px;
+}
+
+
+#Destinos{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+  flex: 1;                /* ocupa el espacio restante */
+    flex-wrap: wrap;
+    flex-direction: row;  
+    gap: 15px;
+    justify-content: center;
+    .destino {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+}
+#bali, #maldivas, #paris, #roma, #tokio{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+#destinos_titulo{
+   background-color: #615353;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;;
+}
+  
+
+.destino:hover {
+  background-color: blue;
+  color: white;
+}
+.destino:hover h3, .destino:hover p, .destino:hover br, .destino:hover button {
+  color: white;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 20px;
+  width: 250px;            /* ancho fijo del nav */
+  height: 750px;
+  padding: 20px;

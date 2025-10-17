@@ -1,0 +1,67 @@
+/* Body centrado y fondo degradado */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00f0ff, #00c3ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del login */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Título “Iniciar Sesión” */
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Grupos de inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Botón gradiente */
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
