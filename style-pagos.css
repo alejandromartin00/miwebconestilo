@@ -113,10 +113,27 @@ button:active {
 }
 
 #destino_pago {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    color: rgb(60, 192, 163);
-    background-color: aquamarine;
+  position: absolute;
+  top: 0px;          /* Sobresale un poco del card */
+  left: 22px;
+  z-index: 10;
+  
+  background: var(--accent);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(11, 113, 235, 0.3);
+}
+
+#destino_pago a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#destino_pago a:before {
+  content: "←";  /* Añade una flecha */
 }
